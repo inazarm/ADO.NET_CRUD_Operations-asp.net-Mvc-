@@ -1,0 +1,105 @@
+﻿@model ADONET_CRUDOperations.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    @using (Html.BeginForm())
+
+    {
+
+        <fieldset>
+
+            <legend>Customer</legend>
+
+
+
+            @Html.HiddenFor(model => model.CustomerID)
+
+            <div class="display-label">
+
+                @Html.DisplayNameFor(model => model.Name)
+
+            </div>
+
+            <div class="display-field">
+
+                @Html.DisplayFor(model => model.Name)
+
+            </div>
+
+
+
+            <div class="display-label">
+
+                @Html.DisplayNameFor(model => model.Address)
+
+            </div>
+
+            <div class="display-field">
+
+                @Html.DisplayFor(model => model.Address)
+
+            </div>
+
+
+
+            <div class="display-label">
+
+                @Html.DisplayNameFor(model => model.Mobileno)
+
+            </div>
+
+            <div class="display-field">
+
+                @Html.DisplayFor(model => model.Mobileno)
+
+            </div>
+
+
+
+            <div class="display-label">
+
+                @Html.DisplayNameFor(model => model.Birthdate)
+
+            </div>
+
+            <div class="display-field">
+
+                @Html.DisplayFor(model => model.Birthdate)
+
+            </div>
+
+
+
+            <div class="display-label">
+
+                @Html.DisplayNameFor(model => model.EmailID)
+
+            </div>
+
+            <div class="display-field">
+
+                @Html.DisplayFor(model => model.EmailID)
+
+            </div>
+
+        </fieldset>
+
+        <p>
+
+            <input id="Submit1" onclick="return confirm('Are you sure you want delete');"
+                   type="submit" value="Delete" />|
+
+            @Html.ActionLink("Back to List", "Index")
+
+        </p>
+
+    }
+</div>

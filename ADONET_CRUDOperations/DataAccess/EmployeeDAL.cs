@@ -63,7 +63,6 @@ namespace ADONET_CRUDOperations.DataAccess
                 cmd.Parameters.AddWithValue("@Address", objEmp.Address);
                 cmd.Parameters.AddWithValue("@Status", objEmp.Status);
                 cmd.Parameters.AddWithValue("@isActive", objEmp.isActive);
-                cmd.Parameters.AddWithValue("@CreatedDate", objEmp.CreatedDate);
                 cmd.Parameters.AddWithValue("@ModifiedDate", null);
                 cmd.Parameters.AddWithValue("@Query", 2);
                 con.Open();

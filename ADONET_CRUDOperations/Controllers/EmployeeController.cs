@@ -70,16 +70,28 @@ namespace ADONET_CRUDOperations.Controllers
 
         // POST: Employee/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Employee empObj)
         {
             try
             {
                 // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    EmployeeDAL empDAL = new EmployeeDAL();
+                    var result = empDAL.UpdateData(empObj);
+                    ViewData["result"] = result;
+                    ModelState.Clear();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError(empObj.EmployeeID.ToString(),"Error in updating record");
+                    return View();
+                }
             }
-            catch
+            catch(Exception ex)
             {
+                ModelState.AddModelError(empObj.EmployeeID.ToString(),"Exception : "+ex.Message);
                 return View();
             }
         }

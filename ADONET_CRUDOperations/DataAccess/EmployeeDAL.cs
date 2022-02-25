@@ -189,13 +189,12 @@ namespace ADONET_CRUDOperations.DataAccess
                     empObj.tEmpID = Convert.ToInt32(ds.Tables[0].Rows[i]["tempID"].ToString());
                     empObj.EmployeeID = Convert.ToInt32(ds.Tables[0].Rows[i]["empID"].ToString());
                     empObj.EmpName = ds.Tables[0].Rows[i]["name"].ToString();
+                    empObj.Email = ds.Tables[0].Rows[i]["email"].ToString();
                     empObj.Phone = ds.Tables[0].Rows[i]["phone"].ToString();
                     empObj.CNIC = ds.Tables[0].Rows[i]["cnic"].ToString();
                     empObj.Address = ds.Tables[0].Rows[i]["address"].ToString();
                     empObj.Status = ds.Tables[0].Rows[i]["status"].ToString();
                     empObj.isActive = ds.Tables[0].Rows[i]["isActive"].ToString();
-                    empObj.CreatedDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["createDate"].ToString());
-                    empObj.ModifiedDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["modifiedDate"].ToString());
                 }
                 return empObj;
             }

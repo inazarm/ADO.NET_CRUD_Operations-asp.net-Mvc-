@@ -61,9 +61,11 @@ namespace ADONET_CRUDOperations.Controllers
         }
 
         // GET: Employee/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            Employee empObj = new Employee();
+            EmployeeDAL empDAL = new EmployeeDAL();
+            return View(empDAL.SelectDatabyID(id));
         }
 
         // POST: Employee/Edit/5

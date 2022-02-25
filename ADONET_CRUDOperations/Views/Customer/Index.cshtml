@@ -12,109 +12,61 @@
 <head>
 
     <meta name="viewport" content="width=device-width" />
-
-    <title>ShowAllCustomerDetails</title>
-
+    <title>Customer Records</title>
+    <link href="~/Content/bootstrap4.min.css" rel="stylesheet" />
 </head>
 
 <body>
 
     <p>
-
         @Html.ActionLink("Create New", "InsertCustomer")
-
+        @Html.ActionLink("Employees List", "Index","Employee")
     </p>
 
-    <table>
-
+    <table class="table table-active">
         <tr>
-
             <th>
-
                 @Html.DisplayNameFor(model => model.Name)
-
             </th>
-
             <th>
-
                 @Html.DisplayNameFor(model => model.Address)
-
             </th>
-
             <th>
-
                 @Html.DisplayNameFor(model => model.Mobileno)
-
             </th>
-
             <th>
-
                 @Html.DisplayNameFor(model => model.Birthdate)
-
             </th>
-
             <th>
-
                 @Html.DisplayNameFor(model => model.EmailID)
-
             </th>
-
-            <th></th>
-
+            <th>Action</th>
         </tr>
-
         @foreach (var item in Model.ShowallCustomer)
-
         {
-
             <tr>
-
                 <td>
-
                     @Html.DisplayFor(modelItem => item.Name)
-
                 </td>
-
                 <td>
-
                     @Html.DisplayFor(modelItem => item.Address)
-
                 </td>
-
                 <td>
-
                     @Html.DisplayFor(modelItem => item.Mobileno)
-
                 </td>
-
                 <td>
-
                     @Html.DisplayFor(modelItem => item.Birthdate)
-
                 </td>
-
                 <td>
-
                     @Html.DisplayFor(modelItem => item.EmailID)
-
                 </td>
-
                 <td>
-
                     @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }) |
-
                     @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
-
                     @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
-
                 </td>
-
             </tr>
-
         }
-
     </table>
-
 </body>
-
 </html>

@@ -69,3 +69,4 @@ C:\Users\Muhammad Nazar\source\repos\ADONET_CRUDOperations\ADONET_CRUDOperations
 C:\Users\Muhammad Nazar\source\repos\ADONET_CRUDOperations\ADONET_CRUDOperations\obj\Debug\ADONET_CRUDOperations.csproj.CopyComplete
 C:\Users\Muhammad Nazar\source\repos\ADONET_CRUDOperations\ADONET_CRUDOperations\obj\Debug\ADONET_CRUDOperations.dll
 C:\Users\Muhammad Nazar\source\repos\ADONET_CRUDOperations\ADONET_CRUDOperations\obj\Debug\ADONET_CRUDOperations.pdb
+C:\Users\Muhammad Nazar\source\repos\ADONET_CRUDOperations\ADONET_CRUDOperations\obj\Debug\ADONET_CRUDOperations.csproj.AssemblyReference.cache

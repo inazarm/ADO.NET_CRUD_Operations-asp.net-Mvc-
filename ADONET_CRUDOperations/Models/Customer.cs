@@ -11,7 +11,6 @@ namespace ADONET_CRUDOperations.Models
             [Key]
             public int CustomerID { get; set; }
 
-
             [Required(ErrorMessage = "Enter Name")]
             public string Name { get; set; }
 
@@ -22,14 +21,16 @@ namespace ADONET_CRUDOperations.Models
 
             [Required(ErrorMessage = "Enter Mobileno")]
             public string Mobileno { get; set; }
-
-
             [DataType(DataType.Date)]
+
+
             [Required(ErrorMessage = "Enter Birthdate")]
             public DateTime Birthdate { get; set; }
 
+
             [Required(ErrorMessage = "Enter Email Address")]
             public string EmailID { get; set; }
+
             public List<Customer> ShowallCustomer { get; set; }
     }
 }
